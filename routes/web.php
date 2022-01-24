@@ -14,7 +14,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('login',[
+    return view('pages.login',[
+        'title' => 'Login'
+    ]);
+});
+
+Route::get('/sidebar', function () {
+    return view('layouts.sidebar',[
         'title' => 'Login'
     ]);
 });
