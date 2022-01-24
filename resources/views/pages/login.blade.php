@@ -6,12 +6,8 @@
     <meta name="generator" content="Hugo 0.88.1">
     <title>Spp Kanesa | {{ $title }}</title>
 
-
-
     <!-- Bootstrap core CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
-
 
     <!-- Custom styles for this template -->
     <link href="css/signin.css" rel="stylesheet">
@@ -43,7 +39,7 @@
 
         <br><br>
 
-        <button class="w-100 btn btn-lg btn-primary" type="submit">Masuk</button>
+        <button class="w-100 btn btn-lg " type="submit" style="background-color: #A6B1E1">Masuk</button>
         <p class="mt-5 mb-3 text-muted" style="color: #DCD6F7">&copy; Aziz-2022</p>
     </form>
     </main>

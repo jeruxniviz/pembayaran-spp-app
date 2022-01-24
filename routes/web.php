@@ -19,8 +19,10 @@ Route::get('/', function () {
     ]);
 });
 
-Route::get('/sidebar', function () {
-    return view('layouts.sidebar',[
-        'title' => 'Login'
+Route::get('/beranda', function () {
+    return view('user.home',[
+        'title' => 'Beranda'
     ]);
 });
+
+
