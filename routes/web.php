@@ -19,10 +19,32 @@ Route::get('/', function () {
     ]);
 });
 
-Route::get('/beranda', function () {
+Route::get('beranda', function () {
     return view('user.home',[
         'title' => 'Beranda'
     ]);
 });
 
+Route::get('profil', function () {
+    return view('user.profil',[
+        'title' => 'Profil'
+    ]);
+});
 
+Route::get('map', function () {
+    return view('user.maps',[
+        'title' => 'Map'
+    ]);
+});
+
+Route::get('pembayaran', function () {
+    return view('user.pembayaran',[
+        'title' => 'Pembayaran'
+    ]);
+});
+
+Route::get('riwayat', function () {
+    return view('user.riwayat',[
+        'title' => 'Riwayat'
+    ]);
+});

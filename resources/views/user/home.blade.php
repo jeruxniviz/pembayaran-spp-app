@@ -1,17 +1,19 @@
 @extends('main')
 @section('isi')
-    <body >
-        <div class="container-fluid text-center bg-light p-4 ">
-            <img class="mb-4" src="img/kanesa_logo.png" alt="" width="100" height="100">
-            <h1 class="display-5 fw-bold">Selamat Datang</h1>
-            <h3 class="display-5 fw-bold">Admin</h3>
-            <div class="col-lg-6 mx-auto">
-                <p class="lead mb-4">Aplikasi Pembayaran SPP SMK Negeri 1 Kepanjen, Lakukan Pembayaran , Lihat histori pembayaran dan Cetak bukti pembayaran dalam satu aplikasi.</p>
-                <div class="d-grid gap-2 d-sm-flex justify-content-sm-center my-auto">
-                    <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Bayar sekarang</button>
-                    <button type="button" class="btn btn-outline-warning btn-lg px-4">Nanti aja</button>
-                </div>
-            </div>
+<div class="header pb-6 d-flex align-items-center" style="min-height: 600px; background-image: url(../assets/img/theme/bg_keren.jpg); background-size: cover; background-position: center top;">
+    <!-- Mask -->
+    <span class="mask bg-gradient-default opacity-8"></span>
+    <!-- Header container -->
+    <div class="container-fluid d-flex align-items-center">
+      <div class="row">
+        <div class="col-lg-7 col-md-10">
+          <h1 class="display-2 text-white">Halo Aziz</h1>
+          <p class="text-white mt-0 mb-5">Aplikasi Pembayaran SPP SMK Negeri 1 Kepanjen, Lakukan Pembayaran , Lihat histori pembayaran dan Cetak bukti pembayaran dalam satu aplikasi.</p>
+          <a href="#!"class="btn btn-primary btn-lg px-4 gap-3">Bayar sekarang</a>
+          <a href="#!"class="btn btn-outline-warning btn-lg px-4">Nanti aja</a>
         </div>
-    </body>
+
+      </div>
+    </div>
+  </div>
 @endsection

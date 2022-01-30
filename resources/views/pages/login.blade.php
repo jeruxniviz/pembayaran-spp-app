@@ -29,11 +29,11 @@
         <h1 class="h3 mb-3 fw-normal" style="color: #424874">Silahkan Masuk</h1>
 
         <div class="form-floating">
-        <input type="text" name="username" class="form-control" id="username" placeholder="Username">
+        <input type="text" name="username" class="form-control" id="username" placeholder="Username" required>
         <label for="username">Nama Siswa</label>
         </div>
         <div class="form-floating">
-        <input type="text" name="nis" class="form-control" id="nis" placeholder="12345">
+        <input type="text" name="nis" class="form-control" id="nis" placeholder="12345" required>
         <label for="nis">Nomor Induk Siswa</label>
         </div>
 

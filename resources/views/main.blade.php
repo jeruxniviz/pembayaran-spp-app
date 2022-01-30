@@ -12,113 +12,204 @@
     <!-- Custom styles for this template -->
     <link href="css/sidebars.css" rel="stylesheet">
     <link href="css/sticky-footer.css" rel="stylesheet">
-
+    <!-- Favicon -->
+    <link rel="icon" href="../assets/img/brand/favicon.png" type="image/png">
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
+    <!-- Icons -->
+    <link rel="stylesheet" href="../assets/vendor/nucleo/css/nucleo.css" type="text/css">
+    <link rel="stylesheet" href="../assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" type="text/css">
+    <!-- Page plugins -->
+    <!-- Argon CSS -->
+    <link rel="stylesheet" href="../assets/css/argon.css?v=1.2.0" type="text/css">
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 
   </head>
 
   <body style="background-color: #5B669B">
-    <main>
-        {{-- SIDEBAR --}}
-        <div class=" d-flex flex-column flex-shrink-0 p-3 bg-dark" style="width: 250px">
-            <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
-            {{-- <i class="bi bi-wallet2 fs-5"></i> --}}
-            <h1 class=" text-white">$</h1>
-            <span class="fs-4  text-white">pp Kanesa</span>
-            </a>
-            <hr class=" text-white">
-            <ul class="nav nav-pills flex-column ">
-            <li>
-                <a href="#" class="nav-link {{ ($title === "Beranda") ? 'active' : '' }} text-white">
-                <i class="bi bi-house-fill"></i>
-                Beranda
+        <!-- Sidenav -->
+        <nav class="sidenav navbar navbar-vertical  fixed-left  navbar-expand-xs navbar-light bg-white" id="sidenav-main">
+            <div class="scrollbar-inner">
+            <!-- Brand -->
+            <div class="sidenav-header  align-items-center">
+                <a class="navbar-brand" >
+                <h1>$pp Kanesa</h1>
                 </a>
-            </li>
-            <li>
-                <a href="#" class="nav-link {{ ($title === "Pembayaran") ? 'active' : '' }} text-white">
-                <i class="bi bi-credit-card-2-front-fill"></i>
-                Pembayaran
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="#" class="nav-link  text-white link-white collapsed" data-bs-toggle="collapse" data-bs-target="#home2-collapse" aria-expanded="true">
-                <i class="bi bi-file-earmark-text-fill"></i>
-                    Laporan
-                </a>
-                <div class="collapse show" id="home2-collapse">
-                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                    <li><a href="#" class="nav-link {{ ($title === "a") ? 'active' : '' }} text-white">Overview</a></li>
-                    <li><a href="#" class="nav-link {{ ($title === "b") ? 'active' : '' }} text-white">Updates</a></li>
-                    <li><a href="#" class="nav-link {{ ($title === "c") ? 'active' : '' }} text-white">Reports</a></li>
-                    </ul>
+            </div>
+            <div class="navbar-inner">
+                <!-- Collapse -->
+                <div class="collapse navbar-collapse" id="sidenav-collapse-main">
+                    <!-- Divider -->
+                    <hr class="my-3">
+                <!-- Nav items -->
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                    <a class="nav-link  {{ ($title === "Beranda") ? 'active' : '' }}" href="beranda">
+                        <i class="ni ni-tv-2 text-primary"></i>
+                        <span class="nav-link-text">Beranda</span>
+                    </a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link {{ ($title === "Profil") ? 'active' : '' }}" href="profil">
+                        <i class="ni ni-single-02 text-yellow"></i>
+                        <span class="nav-link-text">Profil</span>
+                    </a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link  {{ ($title === "Pembayaran") ? 'active' : '' }}" href="pembayaran">
+                        <i class="ni ni-money-coins text-orange"></i>
+                        <span class="nav-link-text">Pembayaran</span>
+                    </a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link {{ ($title === "Map") ? 'active' : '' }}" href="map">
+                        <i class="ni ni-pin-3 text-primary"></i>
+                        <span class="nav-link-text">Google Maps Kanesa</span>
+                    </a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link {{ ($title === "Riwayat") ? 'active' : '' }}" href="riwayat">
+                        <i class="ni ni-bullet-list-67 text-default"></i>
+                        <span class="nav-link-text">Riwayat Pembayaran</span>
+                    </a>
+                    </li>
+                </ul>
+                {{-- <!-- Divider -->
+                <hr class="my-3">
+                <!-- Heading -->
+                <h6 class="navbar-heading p-0 text-muted">
+                    <span class="docs-normal">Documentation</span>
+                </h6>
+                <!-- Navigation -->
+                <ul class="navbar-nav mb-md-3">
+                    <li class="nav-item">
+                    <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/getting-started/overview.html" target="_blank">
+                        <i class="ni ni-spaceship"></i>
+                        <span class="nav-link-text">Getting started</span>
+                    </a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/foundation/colors.html" target="_blank">
+                        <i class="ni ni-palette"></i>
+                        <span class="nav-link-text">Foundation</span>
+                    </a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/components/alerts.html" target="_blank">
+                        <i class="ni ni-ui-04"></i>
+                        <span class="nav-link-text">Components</span>
+                    </a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/plugins/charts.html" target="_blank">
+                        <i class="ni ni-chart-pie-35"></i>
+                        <span class="nav-link-text">Plugins</span>
+                    </a>
+                    </li>
+                </ul> --}}
                 </div>
-            </li>
-            <hr class=" text-white">
-            <li class="nav-item">
-                <a href="#" class="nav-link  text-white link-white collapsed" data-bs-toggle="collapse" data-bs-target="#home3-collapse" aria-expanded="true">
-                <i class="bi bi-file-earmark-text-fill"></i>
-                    Laporan
-                </a>
-                <div class="collapse show" id="home3-collapse">
-                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                    <li><a href="#" class="nav-link {{ ($title === "d") ? 'active' : '' }} text-white">Overview</a></li>
-                    <li><a href="#"class="nav-link {{ ($title === "e") ? 'active' : '' }} text-white">Updates</a></li>
-                    <li><a href="#" class="nav-link {{ ($title === "f") ? 'active' : '' }} text-white">Reports</a></li>
-                    </ul>
-                </div>
-            </li>
-            <li>
-                <a href="#" class="nav-link {{ ($title === "g") ? 'active' : '' }} text-white">
-                    <i class="bi bi-credit-card-2-front-fill"></i>
-                Customers
-                </a>
-            </li>
-            </ul>
-        </div>
-
-        {{-- HEADER --}}
-        <div class="container-fluid p-3">
-            <header class="py-3 mb-3 border-bottom">
-                <div class="container-fluid d-grid gap-3 align-items-center" style="grid-template-columns: 1fr 2fr;">
-                  <div class="container">
-
-                  </div>
-
-                  <div class="d-flex align-items-center">
-                    <form class="w-100 me-3">
-                      <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
-                    </form>
-
-                    <div class="flex-shrink-0 dropdown align-items-center">
-                      <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
-                        <img src="https://github.com/jeruxniviz.png" alt="mdo" width="32" height="32" class="rounded-circle">
-                      </a>
-                      <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
-                        <li><a class="dropdown-item" href="#">Ganti password</a></li>
-                        <li><a class="dropdown-item" href="#">Pengaturan</a></li>
-                        <li><a class="dropdown-item" href="#">Profil</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="login">Keluar</a></li>
-                      </ul>
+            </div>
+            </div>
+        </nav>
+  <!-- Main content -->
+        <div class="main-content" id="panel">
+    <!-- Topnav -->
+            <nav class="navbar navbar-top navbar-expand navbar-dark bg-primary border-bottom">
+            <div class="container-fluid">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <!-- Search form -->
+                <form class="navbar-search navbar-search-light form-inline mr-sm-3" id="navbar-search-main">
+                    <div class="form-group mb-0">
+                    <div class="input-group input-group-alternative input-group-merge">
+                        <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fas fa-search"></i></span>
+                        </div>
+                        <input class="form-control" placeholder="Search" type="text">
                     </div>
-                  </div>
+                    </div>
+                    <button type="button" class="close" data-action="search-close" data-target="#navbar-search-main" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                    </button>
+                </form>
+                <!-- Navbar links -->
+                <ul class="navbar-nav align-items-center  ml-md-auto ">
+                    <li class="nav-item d-xl-none">
+                    <!-- Sidenav toggler -->
+                    <div class="pr-3 sidenav-toggler sidenav-toggler-dark" data-action="sidenav-pin" data-target="#sidenav-main">
+                        <div class="sidenav-toggler-inner">
+                        <i class="sidenav-toggler-line"></i>
+                        <i class="sidenav-toggler-line"></i>
+                        <i class="sidenav-toggler-line"></i>
+                        </div>
+                    </div>
+                    </li>
+                    <li class="nav-item d-sm-none">
+                    <a class="nav-link" href="#" data-action="search-show" data-target="#navbar-search-main">
+                        <i class="ni ni-zoom-split-in"></i>
+                    </a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav align-items-center  ml-auto ml-md-0 ">
+                    <li class="nav-item dropdown">
+                    <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <div class="media align-items-center">
+                        <span class="avatar avatar-sm rounded-circle">
+                            <img alt="Image placeholder" src="../assets/img/theme/angular.jpg">
+                        </span>
+                        <div class="media-body  ml-2  d-none d-lg-block">
+                            <span class="mb-0 text-sm  font-weight-bold">Aziz</span>
+                        </div>
+                        </div>
+                    </a>
+                    <div class="dropdown-menu  dropdown-menu-right ">
+                        <div class="dropdown-header noti-title">
+                        <h6 class="text-overflow m-0">Hai!</h6>
+                        </div>
+                        <a href="#!" class="dropdown-item">
+                        <i class="ni ni-single-02"></i>
+                        <span>Profil</span>
+                        </a>
+                        <a href="#!" class="dropdown-item">
+                        <i class="ni ni-settings-gear-65"></i>
+                        <span>Ganti Sandi</span>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#!" class="dropdown-item">
+                        <i class="ni ni-user-run"></i>
+                        <span>Keluar</span>
+                        </a>
+                    </div>
+                    </li>
+                </ul>
                 </div>
-            </header>
+            </div>
+            </nav>
 
             {{-- ISI --}}
-            @yield('isi')
+                @yield('isi')
+
 
             {{-- FOOTER --}}
-            <footer class="footer mt-2 py-4 bg-light text-center">
+            <footer class="footer text-center">
                 <div class="container">
                   <span class="text-muted ">&copy; 2022 Aziz, Jeruxniviz</span>
                 </div>
             </footer>
         </div>
 
-    </main>
-
+    <!-- Argon Scripts -->
+    <!-- Core -->
+    <script src="../assets/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="../assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/vendor/js-cookie/js.cookie.js"></script>
+    <script src="../assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js"></script>
+    <script src="../assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js"></script>
+    <!-- Optional JS -->
+    <script src="../assets/vendor/chart.js/dist/Chart.min.js"></script>
+    <script src="../assets/vendor/chart.js/dist/Chart.extension.js"></script>
+    <!-- Argon JS -->
+    <script src="../assets/js/argon.js?v=1.2.0"></script>
     <script src="js/sidebars.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
